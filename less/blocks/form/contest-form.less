@@ -1,0 +1,138 @@
+.contest-form__user-info {
+  .local-reset();
+  border: 0;
+  background-color: white;
+  padding-bottom: 22px;
+}
+.contest-form__field {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.contest-form__label {
+  .local-reset();
+  line-height: 30px;
+  text-transform: uppercase;
+  color: @color-pink;
+  margin-left: 22px;
+  margin-bottom: 7px;
+}
+.contest-form__input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 20px;
+  font-size: 18px;
+  line-height: 30px;
+  border: 2px solid @color-border;
+  border-radius: 2px;
+  &::placeholder {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    color: @base-color;
+  }
+}
+.contest-form__achievements,
+.contest-form__application {
+  .local-reset();
+  border: 0;
+  background-color: @background-lite;
+}
+.contest-form__legend {
+  .local-reset();
+  display: block;
+  width: 100%;
+  padding: 40px 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: @color-pink;
+  background-color: @background-lite;
+}
+.contest-form__desc {
+  background-color: white;
+  padding-bottom: 12px;
+}
+.contest-form__list-checkbox,
+.contest-form__list-radio {
+  .list-reset();
+  text-align: left;
+  padding-left: 90px;
+  padding-right: 20px;
+}
+
+.contest-form__input,
+.contest-form__input-radio {
+  display: none;
+}
+.contest-form__label,
+.contest-form__label-radio {
+  .local-reset();
+  display: block;
+  position: relative;
+  margin-bottom: 52px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: @base-color;
+}
+.contest-form__label::before,
+.contest-form__label-radio::before {
+  position: absolute;
+  left: -70px;
+  top: -2px;
+  content: "";
+  display: block;
+  width: 35px;
+  height: 35px;
+  border: 2px solid @color-border;
+  border-radius: 2px;
+  background-color: white;
+}
+.contest-form__input:checked + .contest-form__label::before {
+  background-image: url("../img/icon-yes.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.contest-form__contacts {
+  .local-reset();
+  border: 0;
+  background-color: white;
+  padding: 36px 20px;
+}
+.contest-form__label-radio {
+  margin-bottom: 45px;
+}
+.contest-form__label-radio::before {
+  border-radius: 50%;
+}
+.contest-form__input-radio:checked + .form__label-radio::before {
+  background-image: url("../img/icon-pink-point.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.contest-form__emotions {
+  .local-reset();
+  border: 0;
+  background-color: white;
+  padding: 0 20px;
+  margin-bottom: 48px;
+}
+.contest-form__button {
+  margin: 0 auto;
+  margin-bottom: 37px;
+  display: block;
+  color: white;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  text-align: center;
+  padding: 17px;
+  width: 275px;
+  box-sizing: border-box;
+  border: 3px solid @color-green;
+  border-radius: 3px;
+  background-color: @color-green;
+  cursor: pointer;
+}
+
