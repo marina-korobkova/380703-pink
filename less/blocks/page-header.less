@@ -1,0 +1,38 @@
+.page-header {
+  height: 325px;
+  background-color: @base-color;
+}
+.page-header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #000000;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.page-header__toggle {
+  width: 24px;
+  height: 23px;
+  background-color: @base-color;
+  background-image: url("../img/icon-menu-cross.svg");
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  border: 0;
+  cursor: pointer;
+}
+.page-header__logo-image{
+  fill: #ffffff;
+}
+
+.page-header__logo[href] {
+  &:hover .page-header__logo-image,
+  &:focus .page-header__logo-image {
+    fill: @color-pink;
+  }
+
+  &:active .page-header__logo-image {
+    fill: rgba(255, 255, 255, 0.3);
+  }
+}

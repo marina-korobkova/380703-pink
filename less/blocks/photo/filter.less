@@ -1,0 +1,64 @@
+.filter {
+  background-color: @background-lite;
+  padding-top: 20px;
+}
+.filter__upload-photo {
+  width: 280px;
+  height: 374px;
+  margin-bottom: 42px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.filter__options {
+  .list-reset();
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 208px;
+  margin-bottom: 40px;
+}
+.filter__option--crop {
+  background: url("../img/icon-editor-crop.svg") 50% 50% no-repeat;
+}
+
+.filter__option--fill {
+  background: url("../img/icon-editor-fill.svg") 50% 0% no-repeat;
+}
+
+.filter__option--contrast {
+  background: url("../img/icon-editor-contrast.svg") 50% 50% no-repeat;
+}
+
+.filter__range-controls {
+  position: relative;
+  width: 240px;
+  margin: 0 auto;
+  margin-bottom: 34px;
+}
+
+.filter__scale {
+  height: 2px;
+  width: 240px;
+  margin: 0 auto;
+  background-color: black;
+}
+.filter__range-toggle {
+  position: absolute;
+  top: -7px;
+  left: 193px;
+  height: 12px;
+  width: 12px;
+  background-color: white;
+  border: 2px solid @color-pink;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.filter__buttons {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-top: 1px solid @color-border;
+}
+.filter__button {
+  margin: 12px auto;
+}
