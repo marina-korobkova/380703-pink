@@ -1,0 +1,74 @@
+.page-main__wrapper {
+  .local-reset();
+  min-height: 238px;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: 50% 25%;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+}
+.page-main__header {
+  color: white;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 300;
+}
+.page-main__promo {
+  .local-reset();
+  padding-top: 56px;
+  padding-bottom: 56px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.page-main__text {
+  width: 241px;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+}
+@media (min-width: @tablet-width) {
+  .page-main__wrapper {
+    min-height: 440px;
+    padding-top: 160px;
+    padding-bottom: 160px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-size: cover;
+  }
+  .page-main__header {
+    font-size: 50px;
+  }
+  .page-main__promo {
+    padding-top: 95px;
+    padding-bottom: 95px;
+    padding-left: 65px;
+    padding-right: 65px;
+}
+  .page-main__text {
+    font-size: 18px;
+    width: 500px;
+  }
+}
+@media (min-width: @desktop-width) {
+  .page-main__wrapper {
+    min-height: 394px;
+    padding-top: 180px;
+    padding-bottom: 90px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .page-main__header {
+    font-size: 50px;
+  }
+  .page-main__promo {
+    padding-top: 95px;
+    padding-bottom: 95px;
+    padding-left: 315px;
+    padding-right: 315px;
+    width: 570px;
+  }
+}

@@ -1,0 +1,40 @@
+.slider__toggle {
+  .local-reset();
+  width: 6px;
+  height: 6px;
+  border: 3px solid rgba(190, 194, 199, 0.3);
+  background-color: rgba(190, 194, 199, 0.3);
+  border-radius: 50%;
+  box-sizing: border-box;
+  font-size: 0;
+  outline: none;
+
+  &:hover {
+    border: 3px solid rgba(126, 134, 143, 0.6);
+    background-color: rgba(126, 134, 143, 0.6);
+  }
+
+  &:active {
+    border: 3px solid rgba(233, 235, 236, 0.1);
+    background-color: rgba(233, 235, 236, 0.1);
+  }
+}
+.slider__toggle--current {
+  width: 12px;
+  height: 12px;
+  border: 3px solid @base-color;
+  background-color: white;
+}
+  &--current:hover,
+  &--current:active {
+    border: 3px solid @color-pink;
+    background-color: white;
+  }
+@media (min-width: @tablet-width) {
+}
+@media (min-width: @desktop-width) {
+  .slider__toggles {
+    display: none;
+  }
+}
+

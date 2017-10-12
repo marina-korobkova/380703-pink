@@ -2,14 +2,17 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Пинк-фотографии</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HTML Academy: Пинк</title>
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <div class="container">
-      <header class="page-header">
-        <div class="page-header__top">
+    <header class="page-header">
+      <div class="container">
+        <div class="page-header__top-menu">
           <a class="page-header__logo">
+            <span class="visually-hidden">Логотип сервиса Pink</span>
             <svg  class="page-header__logo-image" version="1.0" xmlns="http://www.w3.org/2000/svg" width="74.426" height="22.859" viewBox="0 0 74.426 22.859">
               <path d="M0 1.45C0 .74.58.16 1.256.16h7.18c5.087 0 8.436 2.705 8.436 7.148v.064c0 4.86-4.057 7.373-8.854 7.373H2.544v6.825c0 .708-.58 1.288-1.288 1.288C.58 22.858 0 22.278 0 21.57V1.45zm8.114 10.978c3.734 0 6.182-1.996 6.182-4.958v-.065c0-3.22-2.415-4.894-6.054-4.894H2.544v9.918h5.57zM21.73 1.288C21.73.58 22.307 0 22.982 0c.71 0 1.288.58 1.288 1.288V21.57c0 .71-.578 1.29-1.287 1.29-.676 0-1.255-.58-1.255-1.29V1.29zM30.87 1.32c0-.676.58-1.256 1.256-1.256h.354c.58 0 .934.29 1.288.74l13.684 17.45V1.256C47.452.58 47.998 0 48.707 0c.676 0 1.223.58 1.223 1.256v20.348c0 .676-.482 1.19-1.158 1.19h-.13c-.547 0-.933-.32-1.32-.77L33.35 4.153v17.45c0 .675-.548 1.255-1.256 1.255-.677 0-1.224-.58-1.224-1.257V1.32zM56.3 1.288C56.3.58 56.88 0 57.556 0c.708 0 1.287.58 1.287 1.288v12.33L71.69.452c.29-.257.58-.45.998-.45.676 0 1.224.612 1.224 1.256 0 .354-.16.644-.42.9l-7.983 7.92 8.563 10.562c.225.29.354.547.354.934 0 .676-.58 1.288-1.287 1.288-.483 0-.806-.258-1.03-.58l-8.403-10.463-4.862 4.86v4.895c0 .708-.58 1.288-1.287 1.288-.677 0-1.256-.58-1.256-1.288V1.288z"/>
             </svg>
@@ -18,12 +21,12 @@
             <span class="visually-hidden">Открыть меню</span>
           </button>
         </div>
-        <nav class="main-nav">
+        <nav class="page-header__menu main-nav">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item" >
               <a class="site-list__link">Главная</a>
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--active">
               <a class="site-list__link" href="photo.html">Фотографии</a>
             </li>
             <li class="site-list__item">
@@ -36,201 +39,160 @@
         </nav>
       </header>
       <main class="page-main">
-        <section class="intro">
-          <h1 class="intro__title">Фотографии пользователей</h1>
-          <p class="intro__text">Взгляните на фотографии,которые выкладывают пользователи! Видите, как не хватает ваших?</p>
-        </section>
+        <div class="page-main__wrapper">
+          <h1 class="page-main__header">Фотографии<br>пользователей</h1>
+        </div>
+        <div class="page-main__promo">
+          <p class="page-main__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        </div>
         <section class="gallery">
           <h2 class="visually-hidden">Фото</h2>
-          <article class="gallety-item">
-            <div class="gallety-item__wrapper">
-              <a href="#" class="gallery-item__link">
-                <img class="gallery-item__author-image" src="img/panorama-mobile@1x.jpg" width="320" height="127" alt="Фото Анны">
-              </a>
-              <div class="gallety-item__desc">
-                <blockquote class="gallety-item__commentary">
-                  <cite class="gallety-item__name-date">
-                    <a class="gallery-item__name" href="#">Анна</a>
-                    <span class="gallety-item__time"> (5 минут назад)</span>
-                  </cite>
-                  <p class="gallety-item__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-                </blockquote>
-                <div class="gallety-item__rating">
-                  <button class="gallery-item__btn-like">
-                    <span class="visually-hidden">Мне нравится!</span>
-                  </button>
-                  <p class="gallery-item__like-text">Нравится: 215</p>
-                </div>
+          <article class="gallery-item gallery-item--panorama">
+            <img class="gallery-item__image gallery-item__image--panorama" src="img/panorama-mobile@1x.jpg" width="320" height="127" alt="Фото Анны">
+            <div class="gallery-item__desc gallery-item__desc--panorama">
+              <blockquote class="gallery-item__commentary">
+                <cite class="gallery-item__name">Анна
+                  <span class="gallery-item__time"> (5 минут назад)</span>
+                </cite>
+                <p class="gallery-item__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+              </blockquote>
+              <div class="gallery-item__rating">
+                <span class="gallery-item__like-text gallery-item__like-text--panorama">Нравится: 215</span>
               </div>
             </div>
           </article>
-          <article class="gallety-item">
-            <div class="gallety-item__wrapper">
-              <a href="#" class="gallery-item__link">
-                <img class="gallery-item__author-image" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фото Левон">
-              </a>
-              <div class="gallety-item__desc">
-                <blockquote class="gallety-item__commentary">
-                  <cite class="gallety-item__name-date">
-                    <a class="gallery-item__name" href="#">Левон</a>
-                    <span class="gallety-item__time"> (5 часов назад)</span>
-                  </cite>
-                  <p class="gallety-item__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-                </blockquote>
-                <div class="gallety-item__rating">
-                  <button class="gallery-item__btn-like">
-                    <span class="visually-hidden">Мне нравится!</span>
-                  </button>
-                  <p class="gallery-item__like-text">Нравится: 356</p>
-                </div>
+          <div class="gallery-item__wrapper">
+          <article class="gallery-item">
+            <img class="gallery-item__image" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фото Левон">
+            <div class="gallery-item__desc">
+              <blockquote class="gallery-item__commentary">
+                <cite class="gallery-item__name">Левон
+                  <span class="gallery-item__time"> (5 часов назад)</span>
+                </cite>
+                <p class="gallery-item__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              </blockquote>
+              <div class="gallery-item__rating">
+                <span class="gallery-item__like-text">Нравится: 356</span>
               </div>
             </div>
           </article>
-          <article class="gallety-item">
-            <div class="gallety-item__wrapper">
-              <a href="#" class="gallery-item__link">
-                <img class="gallery-item__author-image" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фото Антона">
-              </a>
-              <div class="gallety-item__desc">
-                <blockquote class="gallety-item__commentary">
-                  <cite class="gallety-item__user-name">
-                    <a class="gallery-item__name" href="#">Антон</a>
-                    <span class="gallety-item__time"> (12 часов назад)</span>
-                  </cite>
-                  <p class="gallety-item__text">Соседи будут рады!</p>
-                </blockquote>
-                <div class="gallety-item__rating">
-                  <button class="gallery-item__btn-like">
-                    <span class="visually-hidden">Мне нравится!</span>
-                  </button>
-                  <p class="gallery-item__like-text">Нравится: 356</p>
-                </div>
+          <article class="gallery-item">
+            <img class="gallery-item__image" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фото Антона">
+            <div class="gallery-item__desc">
+              <blockquote class="gallery-item__commentary">
+                <cite class="gallery-item__name">Антон
+                  <span class="gallery-item__time"> (12 часов назад)</span>
+                </cite>
+                <p class="gallery-item__text">Соседи будут рады!</p>
+              </blockquote>
+              <div class="gallery-item__rating">
+                <span class="gallery-item__like-text">Нравится: 215</span>
               </div>
             </div>
           </article>
-          <article class="gallety-item">
-            <div class="gallety-item__wrapper">
-              <a href="#" class="gallery-item__link">
-                <img class="gallery-item__author-image" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фото Бориса">
-              </a>
-              <div class="gallety-item__desc">
-                <blockquote class="gallety-item__commentary">
-                  <cite class="gallety-item__user-name">
-                    <a class="gallery-item__name" href="#">Борис</a>
-                    <span class="gallety-item__time"> (20 часов назад)</span>
-                  </cite>
-                  <p class="gallety-item__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
-                </blockquote>
-                <div class="gallety-item__rating">
-                  <button class="gallery-item__btn-like">
-                    <span class="visually-hidden">Мне нравится!</span>
-                  </button>
-                  <p class="gallery-item__like-text">Нравится: 356</p>
-                </div>
+          <article class="gallery-item">
+            <img class="gallery-item__image" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фото Бориса">
+            <div class="gallery-item__desc">
+              <blockquote class="gallery-item__commentary">
+                <cite class="gallery-item__name">Борис
+                  <span class="gallery-item__time"> (20 часов назад)</span>
+                </cite>
+                <p class="gallery-item__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              </blockquote>
+              <div class="gallery-item__rating">
+                <span class="gallery-item__like-text">Нравится: 215</span>
               </div>
             </div>
           </article>
-          <article class="gallety-item">
-            <div class="gallety-item__wrapper">
-              <a href="#" class="gallery-item__link">
-                <img class="gallery-item__author-image" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фото Сергея">
-              </a>
-              <div class="gallety-item__desc">
-                <blockquote class="gallety-item__commentary">
-                  <cite class="gallety-item__user-name">
-                    <a class="gallery-item__name" href="#">Сергей</a>
-                    <span class="gallety-item__time"> (25 часов назад)</span>
-                  </cite>
-                  <p class="gallety-item__text">Самая кубанская в мире!</p>
-                </blockquote>
-                <div class="gallety-item__rating">
-                  <button class="gallery-item__btn-like">
-                    <span class="visually-hidden">Мне нравится!</span>
-                  </button>
-                  <p class="gallery-item__like-text">Нравится: 356</p>
-                </div>
+          <article class="gallery-item">
+            <img class="gallery-item__image" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фото Сергея">
+            <div class="gallery-item__desc">
+              <blockquote class="gallery-item__commentary">
+                <cite class="gallery-item__name">Сергей
+                  <span class="gallery-item__time"> (25 часов назад)</span>
+                </cite>
+                <p class="gallery-item__text">Самая кубанская в мире!</p>
+              </blockquote>
+              <div class="gallery-item__rating">
+                <span class="gallery-item__like-text">Нравится: 215</span>
               </div>
             </div>
           </article>
-          <article class="gallety-item">
-            <div class="gallety-item__wrapper">
-              <a href="#" class="gallery-item__link">
-                <img class="gallery-item__author-image" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фото Максима">
-              </a>
-              <div class="gallety-item__desc">
-                <blockquote class="gallety-item__commentary">
-                  <cite class="gallety-item__user-name">
-                    <a class="gallery-item__name" href="#">Максим</a>
-                    <span class="gallety-item__time"> (40 часов назад)</span>
-                  </cite>
-                  <p class="gallety-item__text">Где снег то?</p>
-                </blockquote>
-                <div class="gallety-item__rating">
-                  <button class="gallery-item__btn-like">
-                    <span class="visually-hidden">Мне нравится!</span>
-                  </button>
-                  <p class="gallery-item__like-text">Нравится: 356</p>
-                </div>
+          <article class="gallery-item">
+            <img class="gallery-item__image" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фото Максима">
+            <div class="gallery-item__desc">
+              <blockquote class="gallery-item__commentary">
+                <cite class="gallery-item__name">Максим
+                  <span class="gallery-item__time"> (40 часов назад)</span>
+                </cite>
+                <p class="gallery-item__text">Где снег то?</p>
+              </blockquote>
+              <div class="gallery-item__rating">
+                <span class="gallery-item__like-text">Нравится: 215</span>
               </div>
             </div>
           </article>
-          <article class="gallety-item">
-            <div class="gallety-item__wrapper">
-              <a href="#" class="gallery-item__link">
-                <img class="gallery-item__author-image" src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Фото Надежды">
-              </a>
-              <div class="gallety-item__desc">
-                <blockquote class="gallety-item__commentary">
-                  <cite class="gallety-item__user-name">
-                    <a class="gallery-item__name" href="#">Надежда</a>
-                    <span class="gallety-item__time"> (45 часов назад назад)</span>
-                  </cite>
-                  <p class="gallety-item__text">Всем GM и взаимные лайки</p>
-                </blockquote>
-                <div class="gallety-item__rating">
-                  <button class="gallery-item__btn-like">
-                    <span class="visually-hidden">Мне нравится!</span>
-                  </button>
-                  <p class="gallery-item__like-text">Нравится: 356</p>
-                </div>
+          <article class="gallery-item">
+            <img class="gallery-item__image" src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Фото Надежды">
+            <div class="gallery-item__desc">
+              <blockquote class="gallery-item__commentary">
+                <cite class="gallery-item__name">Надежда
+                  <span class="gallery-item__time"> (45 часов назад назад)</span>
+                </cite>
+                <p class="gallery-item__text">Всем GM и взаимные лайки</p>
+              </blockquote>
+              <div class="gallery-item__rating">
+                <span class="gallery-item__like-text">Нравится: 215</span>
               </div>
             </div>
           </article>
+        </div>
         </section>
         <section class="upload-photo">
           <h2 class="visually-hidden">Загрузите фото</h2>
           <p class="upload-photo__text">Затмите из всех! Выкладывайте все, что накопилось в телефоне!
-          <div class="upload-photo__wrapper filter">
-            <div class="filter__upload-photo">
-              <a href="#" class="upload-photo__picture">
-                <img class="upload-photo__image" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Ваше фото">
-              </a>
-            </div>
-            <div class="filter__settings">
-              <p class="filter__option">
-                <button class="filter__option-btn filter__option--crop">
-                  <span class="visually-hidden">Обрезать фото</span>
+          <div class="upload-photo__wrapper">
+            <p class="upload-photo__picture">
+              <img class="upload-photo__image" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Ваше фото">
+            </p>
+            <div class="upload-photo__settings">
+              <div class="unpload-photo__options">
+                <button class="unpload-photo__option-crop" type="button">
+                  <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+                    <path fill="none" d="M0,0h48v48H0V0z"/>
+                    <path fill="#d22856" d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/>
+                  </svg>
+                  <span class="visually-hidden">Обрезать</span>
                 </button>
-                <button class="filter__option filter__option--fill">
-                <span class="visually-hidden">Насыщенность</span>
+                <button class="unpload-photo__option-fill" type="button">
+                  <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+                    <path fill="none" d="M0,0h48v48H0V0z"/>
+                    <path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/>
+                  <rect y="40" width="48" height="3"/>
+                  </svg>
+                  <span class="visually-hidden">Залить</span>
                 </button>
-                <button class="filter__option filter__option--contrast">
+                <button class="unpload-photo__option-contrast" type="button">
+                  <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31.92px" height="31.92px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve">
+                    <path fill="#231F20" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/>
+                  <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
+                  </svg>
                   <span class="visually-hidden">Контрастность</span>
                 </button>
-              </p>
-              <div class="filter__range-controls">
-                <div class="filter__scale">
-                  <div class="filter__bar"></div>
-                </div>
-                <div class="filter__range-toggle"></div>
               </div>
-              <button class="filter__button button--active">Запостить</button>
-              <button class="filter__button button--disabled">Отмена</button>
-            </div>
+              <div class="upload-photo__range-controls">
+              <div class="upload-photo__scale">
+                <div class="filter__bar"></div>
+              </div>
+              <div class="upload-photo__range-toggle"></div>
+              </div>
+              <button class="button upload-photo__button button--pink" type="submit">Запостить</button>
+              <button class="button upload-photo__button button--grey" type="button">Отмена</button>
           </div>
-        </section>
+        </div>
+      </section>
       </main>
-       <footer class="page-footer page-footer--hidden">
+       <footer class="page-footer page-footer__index">
         <div class="page-footer__wrapper">
           <a class="page-footer__logo">
             <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип Пинк">
@@ -238,17 +200,17 @@
           <div class="page-footer__social social">
             <ul class="social__list">
               <li class="social__item">
-                <a class="social__link social__link--twitter" href="https://vk.com/htmlacademy">
+                <a class="social__link social__link-twitter" href="https://vk.com/htmlacademy">
                   <span class="visually-hidden">Мы в Твиттере</span>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+                <a class="social__link social__link-facebook" href="https://www.facebook.com/htmlacademy">
                   <span class="visually-hidden">Мы в Фейсбуке</span>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--youtube" href="https://www.instagram.com/htmlacademy">
+                <a class="social__link social__link-youtube" href="https://www.instagram.com/htmlacademy">
                   <span class="visually-hidden">Мы на Youtube</span>
                 </a>
               </li>

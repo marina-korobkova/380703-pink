@@ -1,21 +1,24 @@
-.features {
-  padding-top: 44px;
-  text-align: center;
-}
-.features__offer-title {
-  background-color: #ffffff;
+.features__offer {
+  background-color: white;
   padding-top: 32px;
+  padding-bottom: 32px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.features__offer-title {
+  .local-reset();
   font-size: 24px;
-  color:@base-color;
+  line-height: 1.2;
+  padding-bottom: 40px;
 }
 .features__list {
   .list-reset();
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 30px;
-  background-color: @background-lite;
+  padding-bottom: 46px;
+  background-color: @background-light;
 }
 .feature__title {
   .local-reset();
@@ -25,6 +28,85 @@
 }
 .feature__description {
   .local-reset();
-  padding-bottom: 41px;
+  padding-bottom: 40px;
   color: @base-color;
+}
+.features__picture--hide {
+  display: none;
+}
+.features__image {
+  display: block;
+}
+@media (min-width: @tablet-width) {
+  .features__offer {
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 59px;
+    padding-bottom: 50px;
+  }
+  .features__offer-title {
+    font-size: 40px;
+  }
+  .features__list {
+    width: 300px;
+
+}
+  .feature__title {
+
+}
+  .feature__description {
+
+  }
+  .features__image-block {
+    position: relative;
+  }
+  .features__picture {
+    position: absolute;
+    width: 241px;
+    height: 425px;
+    bottom: -25px;
+    left: 0;
+  }
+}
+@media (min-width: @desktop-width) {
+  .features__offer {
+    background-color: white;
+  }
+  .features__offer-title {
+    font-size: 50px;
+  }
+  .features__list {
+   display: flex;
+   justify-contect: space-between;
+   text-align: center;
+   width: 940px;
+   padding-bottom: 73px;
+   padding-left: 130px;
+   padding-right: 130px;
+}
+  .features__title {
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+}
+  .features__description {
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+}
+  .features__image-block {
+    display: flex;
+    justify-content: space-between;
+  }
+  .features__picture {
+    width: 185px;
+  }
+  .features__picture--hide {
+    display: block;
+  }
+  .features__image {
+    width: 169px;
+    height: 298px;
+  }
 }

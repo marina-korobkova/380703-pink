@@ -1,64 +1,69 @@
-.filter {
-  background-color: @background-lite;
-  padding-top: 20px;
-}
-.filter__upload-photo {
-  width: 280px;
-  height: 374px;
-  margin-bottom: 42px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.filter__options {
-  .list-reset();
-  margin: 0 auto;
+.upload-photo {
+  .local-reset ();
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  width: 208px;
-  margin-bottom: 40px;
-}
-.filter__option--crop {
-  background: url("../img/icon-editor-crop.svg") 50% 50% no-repeat;
-}
-
-.filter__option--fill {
-  background: url("../img/icon-editor-fill.svg") 50% 0% no-repeat;
-}
-
-.filter__option--contrast {
-  background: url("../img/icon-editor-contrast.svg") 50% 50% no-repeat;
-}
-
-.filter__range-controls {
-  position: relative;
-  width: 240px;
+  flex-direction: column;
+  width: 320px;
+  align-items: center;
   margin: 0 auto;
-  margin-bottom: 34px;
+  background-color: #f2f2f2;
 }
-
-.filter__scale {
-  height: 2px;
-  width: 240px;
-  margin: 0 auto;
-  background-color: black;
+.upload-photo__wrapper {
+  .local-reset();
+    width: 320px;
+    margin: 0 auto;
 }
-.filter__range-toggle {
-  position: absolute;
-  top: -7px;
-  left: 193px;
-  height: 12px;
-  width: 12px;
+.upload-photo__text {
+  .local-reset();
+  width: 320px;
+  box-sizing: border-box;
+  padding-top: 25px;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 300;
+  text-align: center;
   background-color: white;
-  border: 2px solid @color-pink;
-  border-radius: 50%;
-  cursor: pointer;
 }
-.filter__buttons {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  border-top: 1px solid @color-border;
+.upload-photo__settings {
+  display: flex;
+  flex-direction: column;
 }
-.filter__button {
-  margin: 12px auto;
+.unpload-photo__options {
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: @tablet-width) {
+ .upload-photo {
+    width: 660px;
+ }
+ .upload-photo__wrapper {
+    display: flex;
+    min-width: 660px;
+    justify-content: space-between;
+    align-items: center;
+ }
+ .upload-photo__text {
+    width: @tablet-width;
+    padding-top: 0;
+    line-height: 24px;
+ }
+ .unpload-photo__options {
+  flex-direction: column;
+  min-height: 200px;
+ }
+}
+@media (min-width: @desktop-width) {
+  .upload-photo {
+    width: 940px;
+  }
+   .upload-photo__text {
+    width: 940;
+ }
+  .upload-photo__settings {
+    width: 470px;
+    margin-left: 90px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
