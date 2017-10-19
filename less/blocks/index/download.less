@@ -1,0 +1,124 @@
+.download {
+  background-color: @background-dark;
+  padding-bottom: 33px;
+}
+.download__picture {
+  position: relative;
+  width: 100%;
+  min-height: 464px;
+  margin-top: -69px;
+  overflow: hidden;
+
+  background-color: @base-color;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: 50% bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.download__image {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-161px);
+}
+.download__slogan {
+  display: none;
+}
+.download__main-link {
+  margin: 28px auto;
+  &:hover,
+  &:focus {
+    color: @color-pink;
+    background-color: #ffffff;
+    border-color: #ffffff;
+  }
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
+}
+.download__list {
+  .list-reset();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 205px;
+  margin: 0 auto;
+  margin-bottom: 23px;
+}
+.download__item {
+  display: block;
+  width: 47px;
+  height: 56px;
+}
+.download__text {
+  margin: 0;
+  padding: 0 20px;
+  color: white;
+  letter-spacing: 0;
+}
+@media (min-width: @tablet-width) {
+  .download {
+    min-height: 730px;
+    box-sizing: border-box;
+    background-color: transparent;
+  }
+  .download__picture {
+    min-height: 730px;
+  }
+  .download-image {
+    width: 700px;
+    transform: translateX(-50%);
+  }
+  .download__slogan {
+    .local-reset;
+    display: block;
+    padding: 0 45px;
+    color: white;
+    font-size: 40px;
+    line-height: 1.2;
+  }
+  .download__block-link {
+    position: relative;
+    width: 300px;
+    margin-top: -500px;
+  }
+  .download__main-link {
+    margin-bottom: 45px;
+  }
+  .download__list {
+    margin-bottom: 38px;
+  }
+  .download__text {
+    font-size: 18px;
+    padding: 0;
+  }
+}
+@media (min-width: @desktop-width) {
+  .download {
+    min-height: 853px;
+  }
+  .download__picture {
+    min-height: 853px;
+    margin-top: 0;
+  }
+  .download__image {
+    width: 1050px;
+    transform: rtanslate(-453px);
+  }
+  .download__block-link {
+    width: 300px;
+    margin: -635px 770px 0 0;
+  }
+  .download_slogan {
+    padding: 0;
+    font-size: 50px;
+  }
+  .download__main-link {
+   margin-top: 50px;
+   margin-bottom: 65px;
+  }
+  .download__list {
+    margin-bottom: 60px;
+  }
+}

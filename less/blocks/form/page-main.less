@@ -18,17 +18,18 @@
   font-weight: 300;
 }
 .page-main__promo {
-  .local-reset();
-  padding-top: 56px;
-  padding-bottom: 56px;
-  box-sizing: border-box;
-  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .page-main__text {
-  width: 241px;
-  font-size: 14px;
-  line-height: 30px;
-  font-weight: 400;
+  .local-reset();
+    padding-top: 40px;
+    padding-bottom: 42px;
+    font-size: 14px;
+    line-height: 2.142;
+    font-weight: 400;
+    text-align: center;
+    color: @base-color;
 }
 @media (min-width: @tablet-width) {
   .page-main__wrapper {
@@ -42,15 +43,13 @@
   .page-main__header {
     font-size: 50px;
   }
-  .page-main__promo {
-    padding-top: 95px;
-    padding-bottom: 95px;
-    padding-left: 65px;
-    padding-right: 65px;
-}
   .page-main__text {
+    padding-top: 93px;
+    padding-right: 30px;
+    padding-bottom: 42px;
+    padding-left: 30px;
     font-size: 18px;
-    width: 500px;
+    line-height: 1.666;
   }
 }
 @media (min-width: @desktop-width) {
@@ -65,10 +64,13 @@
     font-size: 50px;
   }
   .page-main__promo {
-    padding-top: 95px;
-    padding-bottom: 95px;
-    padding-left: 315px;
-    padding-right: 315px;
-    width: 570px;
+    padding: 0;
+  }
+  .page-main__text{
+    width: 770px;
+    margin: 0 auto;
+    padding-right: 95px;
+    padding-bottom: 45px;
+    padding-left: 95px;
   }
 }
