@@ -1,3 +1,21 @@
+.slider {
+  width: 100%;
+}
+.slider__list {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hiden;
+}
+.slider__item {
+  flex: 0 0 auto;
+}
+.slider__toggles {
+  width: 56px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .slider__toggle {
   .local-reset();
   width: 6px;
@@ -8,6 +26,7 @@
   box-sizing: border-box;
   font-size: 0;
   outline: none;
+  cursor: pointer;
 
   &:hover {
     border: 3px solid rgba(126, 134, 143, 0.6);
@@ -31,6 +50,7 @@
     background-color: white;
   }
 @media (min-width: @tablet-width) {
+  width: 60px;
 }
 @media (min-width: @desktop-width) {
   .slider__toggles {

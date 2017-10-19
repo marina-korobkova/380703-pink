@@ -1,26 +1,115 @@
-.page-footer__index {
-  display: none;
+.page-footer {
+  padding-top: 40px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  &--hidden {
+    display: none;
+  }
 }
-.page-footer__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
+.page-footer__logo {
+  flex-basis: auto;
+  display: inline-block;
+  vertical-align: top;
+  width: 147px;
+  height: 40px;
+  margin-bottom: 40px;
+}
+.page-footer__social {
+  flex-basis: auto;
+  margin-bottom: 40px;
+}
+.page-footer__copyright {
+  flex-basis: auto;
+  width: 130px;
+}
+.page-footer__block {
+  .local-reset();
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  font-size: 0;
+}
+.page-footer__text {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  margin-top: -7px;
+  margin-right: auto;
+  font-size: 14px;
+  line-height: 1.285;
+  color: #283645;
+}
+.page-footer__academy-link {
+  display: inline-block;
+  vertical-align: middle;
+  width: 27px;
+  height: 35px;
+  margin-right: 1px;
+  font-size: 14px;
 }
 @media (min-width: @tablet-width) {
-  .page-footer__index {
-    display: block;
-  }
-  .page-footer__wrapper {
+  .page-footer {
+    padding-top: 36px;
+    padding-bottom: 37px;
     flex-direction: row;
-    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    &--hidden {
+      display: flex;
+    }
+  }
+  .page-footer__logo {
+    margin: 0;
+  }
+  .page-footer__social {
+    margin: 0;
+    margin-top: 3px;
+    margin-right: -2px;
+  }
+  .page-footer__copyright {
+    width: 150px;
+    margin-top: 14px;
+  }
+  .page-footer__block {
+    text-align: right;
+    justify-content: flex-end;
+  }
+  .page-footer__text {
+    margin-right: 0;
+  }
+  .page-footer__academy-link {
+    margin-left: 14px;
   }
 }
 @media (min-width: @desktop-width) {
-  .page-footer__wrapper {
-    width: @desktop-width;
+  .page-footer {
+    padding: 0;
+    padding-top: 69px;
+    padding-bottom: 73px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .page-footer__social {
+    margin-top: 4px;
+    margin-right: -22px;
+  }
+  .page-footer__copyright {
+    width: 170px;
+    margin-top: 15px;
+  }
+  .page-footer__text {
+    font-size: 18px;
+    line-height: 1;
+  }
+  .page-footer__academy-link {
+    margin-left: 13px;
   }
 }
