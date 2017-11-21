@@ -16,6 +16,15 @@
   height: 180px;
   text-decoration: none;
 }
+.gallery-item__img-set {
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 .gallery-item__image {
   display: block;
 }
@@ -147,8 +156,12 @@
 @media (min-width: @desktop-width) {
   .gallery-item {
     margin-bottom: 54px;
+    //&:nth-of-type(odd),
+    //&:last-of-type {
+      //margin-bottom: 54px;
+    //}
   }
-  .gallery-item__link-image {
+  .gallery-item__block-img {
     height: 400px;
   }
   .gallery-item__commentary {
